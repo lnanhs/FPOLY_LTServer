@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form method="post" action="/add" enctype="application/x-www-form-urlencoded">
+      <input name="tenSV" placeholder="Nhập tên sinh viên">
+      <input name="tuoiSV" placeholder="Nhập tuổi sinh viên">
+      <input name="diachiSV" placeholder="Nhập địa chỉ sinh viên">
+      <button type="submit">Save</button>
+    </form>
+
+  <% for (var i = 0;i < data.length; i++ ){ %>
+
+    <hr>
+    <h1><%= data[i].name %></h1>
+    <h1><%= data[i].tuoi %></h1>
+    <h1><%= data[i].address %></h1>
+
+<% } %>
+  </body>
+</html>
